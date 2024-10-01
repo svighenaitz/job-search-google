@@ -10,6 +10,7 @@ const jobBoards = [
   'myworkdayjobs.com',
   'careers.jobscore.com',
   'ats.comparably.com',
+  'app.dover.io'
 ];
 
 const googleTimeframes = {
