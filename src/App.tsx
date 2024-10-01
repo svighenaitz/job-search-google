@@ -9,16 +9,22 @@ function App() {
   const [timeframe, setTimeframe] = useState('day');
 
   return (
-    <div className="App">
-      
+    <div className="App flex flex-col items-center justify-center h-screen p-4">
+      <h1 className="text-4xl font-bold mb-4 text-center">Job Board Search Engine</h1>
+      <h2 className="text-xl mb-8 text-center text-gray-600">Find your next opportunity across multiple job boards</h2>
       <JobSearch
         term={term}
         setTerm={setTerm}
         timeframe={timeframe}
         setTimeframe={setTimeframe}
       />
+      <div className="my-8">
+        <p className="text-center text-gray-700 mb-4">Click on one of the following job boards to continue your search:</p>
+      </div>
       <JobBoards term={term} timeframe={timeframe} />
-      <Footer />
+      <div className="mt-auto">
+        <Footer />
+      </div>
     </div>
   );
 }

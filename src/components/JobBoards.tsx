@@ -30,13 +30,20 @@ function getLink(jobBoard, term, timeframe) {
 function JobBoards({ term, timeframe }) {
   return (
     <div>
-      {jobBoards.map((board) => (
-        <p key={board}>
-          <a href={getLink(board, term, timeframe)} target="_blank" rel="noopener noreferrer">
-            {board}
-          </a>
-        </p>
-      ))}
+      <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+        {jobBoards.map((board) => (
+          <li key={board} className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+            <a
+              href={getLink(board, term, timeframe)}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block p-4 text-blue-600 hover:text-blue-800 transition-colors duration-300"
+            >
+              {board}
+            </a>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }
